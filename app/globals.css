@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #F7F1E4;
+  --paper-deep: #EFE7D3;
+  --card: #FFFCF5;
+  --ink: #221D14;
+  --muted: #726A56;
+  --line: rgba(34,29,20,0.12);
+  --gold: #B8892E;
+  --gold-bright: #D4AF37;
+  --gold-tint: #F1E1B8;
+  --terracotta: #B5502E;
+  --terracotta-tint: #F3DCCF;
+}
+
+html { scroll-behavior: smooth; box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--paper-deep); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── Type ── */
+.serif { font-family: 'Lora', serif; }
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+.gold-text {
+  background: linear-gradient(135deg, #A6752B 0%, #D4AF37 55%, #8A6414 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Layout ── */
+.wrap {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 640px) { .wrap { padding-left: 32px; padding-right: 32px; } }
+@media (min-width: 1024px) { .wrap { padding-left: 56px; padding-right: 56px; } }
+
+.content-shift {
+  padding-left: 0;
+}
+@media (min-width: 1024px) {
+  .content-shift { padding-left: 240px; }
+}
+
+/* ── Sidebar (desktop nav) ── */
+.sidebar {
+  background: var(--card);
+  border-right: 1px solid var(--line);
+}
+
+.sidebar-link {
+  position: relative;
+  border-left: 2px solid transparent;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.sidebar-link:hover, .sidebar-link[data-active="true"] {
+  border-left-color: var(--gold);
+  background: var(--gold-tint);
+}
+
+/* ── Bottom sheet (mobile nav) ── */
+.sheet-overlay {
+  background: rgba(34,29,20,0.4);
+}
+.sheet-panel {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -12px 32px rgba(34,29,20,0.18);
+}
+
+/* ── Cards ── */
+.card-note {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 0 var(--line);
+}
+
+.card-plain {
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+/* ── Buttons ── */
+.btn-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8892E 100%);
+  color: #221600;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #8A6414;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-gold:hover { transform: translateY(2px); box-shadow: 0 2px 0 #8A6414; }
+
+.btn-outline {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+  transition: background .2s ease, color .2s ease;
+}
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #0d6d5f;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-whatsapp:hover { transform: translateY(2px); box-shadow: 0 2px 0 #0d6d5f; }
+
+/* ── Chips / tags ── */
+.chip {
+  background: var(--gold-tint);
+  color: #6B4E10;
+  border: 1px solid rgba(184,137,46,0.3);
+}
+.chip-terracotta {
+  background: var(--terracotta-tint);
+  color: #8A3A1F;
+  border: 1px solid rgba(181,80,46,0.28);
+}
+
+/* ── Dividers ── */
+.dash-divider {
+  border-top: 1.5px dashed var(--line);
+}
+
+/* ── Marquee ── */
+.marquee-wrap {
+  overflow: hidden;
+  background: var(--ink);
+  padding: 8px 0;
+  width: 100%;
+}
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-content { display: inline-flex; animation: marquee 32s linear infinite; white-space: nowrap; }
+
+/* ── Postcard tilt ── */
+.tilt-1 { transform: rotate(-1.4deg); }
+.tilt-2 { transform: rotate(1.1deg); }
+.tilt-3 { transform: rotate(-0.8deg); }
+.tilt-4 { transform: rotate(1.6deg); }
+.tilt-1:hover, .tilt-2:hover, .tilt-3:hover, .tilt-4:hover { transform: rotate(0deg) translateY(-3px); }
+
+/* ── Pulse ── */
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184,137,46,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(184,137,46,0); }
+}
+.animate-pulse-gold { animation: pulse-gold 2.4s ease-out infinite; }

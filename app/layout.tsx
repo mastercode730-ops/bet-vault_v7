@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Bet Vault — Notes on Getting a Cricket Betting ID",
+  description: "A small team that sets up cricket betting IDs over WhatsApp. Written by the people who actually answer the messages.",
+  keywords: "cricket betting ID, IPL betting ID, online betting ID India, Bet Vault",
+  openGraph: {
+    title: "Bet Vault — Notes on Getting a Cricket Betting ID",
+    description: "A small team that sets up cricket betting IDs over WhatsApp.",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}
