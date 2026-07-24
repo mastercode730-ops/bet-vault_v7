@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.png',
+    apple: '/apple-icon.png',
+  },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://betvault.in'),
   title: "Bet Vault — Notes on Getting a Cricket Betting ID",
   description: "A small team that sets up cricket betting IDs over WhatsApp. Written by the people who actually answer the messages.",
