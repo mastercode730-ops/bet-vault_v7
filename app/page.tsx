@@ -1,3 +1,4 @@
+import PaymentSection from '@/components/PaymentSection';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import TrustStrip from '@/components/TrustStrip';
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="content-shift">
         <Hero />
         <TrustStrip />
+      <PaymentSection />
         <WhyUs />
         <Process />
         <Markets />
