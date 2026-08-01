@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://betvaultbookie.com'),
-  title: "Bet Vault — Notes on Getting a Cricket Betting ID",
+  title: "BetVault | Online Cricket Betting, Sports Betting & Casino",
   description: "A small team that sets up cricket betting IDs over WhatsApp. Written by the people who actually answer the messages.",
   keywords: "cricket betting ID, IPL betting ID, online betting ID India, Bet Vault",
   openGraph: {
-    title: "Bet Vault — Notes on Getting a Cricket Betting ID",
+    title: "BetVault | Online Cricket Betting, Sports Betting & Casino",
     description: "A small team that sets up cricket betting IDs over WhatsApp.",
     type: "website",
   },
