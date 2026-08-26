@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     description: "A small team that sets up cricket betting IDs over WhatsApp.",
     type: "website",
   },
+  verification: {
+    google: "aAusyjh5_-9ytMEdDEDSftWfjd7XLzGMNe6-NqlEeuA",
+  },
 };
 
 export default function RootLayout({
