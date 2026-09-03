@@ -4,18 +4,16 @@ import { useState } from 'react';
 import { waLink } from '@/lib/whatsapp';
 
 const faqs = [
-  { q: 'Is this actually legal for me to use?', a: "Honestly, it depends on your state, and Indian betting law is a genuinely tangled thing to explain in a paragraph. We operate under international licensing, same as most platforms here. Check your local rules, and please bet responsibly regardless." },
-  { q: 'How fast is fast, really?', a: 'I timed it myself once — four minutes forty seconds. Most people land somewhere between five and ten minutes, depending on how many of us are mid-conversation with someone else at that moment.' },
-  { q: 'Can one ID cover more than cricket?', a: 'Yes. Same login gets you into football, casino games, and whatever else is on the platform.' },
-  { q: 'Is my money actually safe here?', a: 'We only work with platforms running bank-level encryption through established payment gateways. Nothing exotic, just the standard stuff done properly.' },
-  { q: 'Which tournaments can I bet on?', a: "IPL, T20 World Cup, ODI series, Test cricket, The Ashes, county matches — basically anything happening gets a spot on the board." },
-  { q: 'What is Bet Vault, honestly, in one line?', a: 'A small group of people who set up cricket betting IDs by hand over WhatsApp instead of making you fill out a form.' },
-  { q: 'How do I actually sign up?', a: 'Message us. Share your name and a couple of details. That\'s the entire form — no email verification, no waiting.' },
-  { q: 'Why do I even need an ID?', a: "It's how you log in, place bets, track what you've won, and claim any bonus — all in one place." },
-  { q: 'How do deposits work?', a: 'Log in, pick UPI, net banking, or a wallet, type the amount, confirm.' },
-  { q: 'And withdrawals?', a: "Same channels. Once you're verified, payouts move quickly — we don't sit on anyone's winnings." },
-  { q: 'I forgot my password. Now what?', a: "Message us. We verify it's really you, then help you reset or recover the account, usually within a few minutes." },
-  { q: 'What rules should I actually know?', a: "18 or older, one account per person, placed bets are final, and only bet what you're genuinely fine losing. That last one isn't boilerplate — we mean it." },
+  { q: 'What is BetVault?', a: "BetVault is the brand or website referenced on this domain. Check the site's current pages and terms for the latest information." },
+  { q: 'How does a BetVault ID work?', a: "An account ID is generally used to identify a user account. Refer to BetVault's current account instructions and terms for the exact process." },
+  { q: 'How can I access BetVault?', a: "Use the site's current official URL and verify the domain before entering any account information. Follow the access instructions published on the site." },
+  { q: 'What sports are available on BetVault?', a: "Available sports can change. Check the current sports or betting section on the website for the latest list and availability." },
+  { q: 'Does BetVault provide live sports information?', a: "Check the site's current sports section for any live-event information and the terms that apply to its use." },
+  { q: 'How can I get help with my BetVault account?', a: "Use the contact or support details published on the website. Avoid relying on unofficial accounts or third-party contacts." },
+  { q: 'How do I find BetVault login information?', a: "Use the official domain and follow the current login or access instructions. If access fails, use the site's published support channel." },
+  { q: 'What payment options are supported?', a: "Use the contact or support details published on the website. Avoid relying on unofficial accounts or third-party contacts." },
+  { q: 'What should I do if I have trouble accessing my account?', a: "Use the official domain and follow the current login or access instructions. If access fails, use the site's published support channel." },
+  { q: 'Where can I find the latest BetVault updates?', a: "Refer to BetVault's current website information and terms for the most accurate answer." },
 ];
 
 export default function FAQ() {
